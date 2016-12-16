@@ -6,6 +6,7 @@ and NeoPixel Strip.
 
 Installation:
  - build cava with (full instruction available below):
+ 
  ```
  ./autogen.sh
  ./configure
@@ -18,7 +19,7 @@ Installation:
 Connect NeoPixel Strip to Raspberry Pi:
  - ground &rarr; ground PIN;
  - power &rarr; 3.3V PIN;
- - logic &arr; GPIO PIN 18.
+ - logic &rarr; GPIO PIN 18.
  
 Usage:
  ```
