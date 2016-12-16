@@ -5,6 +5,13 @@
 
 int print_raw_out(int bars, int fp, int is_bin, int bit_format, int ascii_range, char bar_delim, char frame_delim, int f[200]) {
 	int i;
+        for (i = 0; i <  bars; i++) {
+               uint8_t f8 = ((float)f[i] / 10000) * 255;
+               printf("%d ", f8);
+        }
+        printf("\n");
+        return 0;
+
 
 	if (is_bin == 1){//binary
 		if (bit_format == 16 ){//16bit:

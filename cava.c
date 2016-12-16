@@ -792,13 +792,6 @@ as of 0.4.0 all options are specified in config file, see in '/home/username/.co
 			f[i] = 0;
 		}
 
-		#ifdef NCURSES
-		//output: start ncurses mode
-		if (om == 1 || om ==  2) {
-			init_terminal_ncurses(color, bcolor, col, bgcol);
-			get_terminal_dim_ncurses(&w, &h);
-		}
-		#endif
 
 		if (om == 3) get_terminal_dim_noncurses(&w, &h);
 

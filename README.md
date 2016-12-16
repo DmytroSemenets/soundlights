@@ -1,5 +1,32 @@
-C.A.V.A. (M.P.)
-====================
+Soundlights
+===========
+
+Soundlights built on top of [cava](https://github.com/karlstav/cava) with Raspberry Pi
+and NeoPixel Strip.
+
+Installation:
+ - build cava with (full instruction available below):
+ ```
+ ./autogen.sh
+ ./configure
+ make
+ ```
+ - install [expect](http://expect.sourceforge.net/);
+ - install [rpi_ws281x](https://github.com/jgarff/rpi_ws281x) on your Raspberry Pi;
+ - copy `soundlights/soundlights.py` to your Raspberry Pi.
+ 
+Connect NeoPixel Strip to Raspberry Pi:
+ - ground &rarr; ground PIN;
+ - power &rarr; 3.3V PIN;
+ - logic &arr; GPIO PIN 18.
+ 
+Usage:
+ ```
+ unbuffer ./cava -p soundlights/cava_config | ssh pi@retropie.local sudo python soundlights.py
+ ```  
+
+Original readme
+===============
 
 **C**onsole-based **A**udio **V**isualizer for **A**LSA (**M**PD and **P**ulseaudio)
 

@@ -1,0 +1,13 @@
+[general]
+bars = 60
+bar_width = 1
+bar_spacing = 1
+
+[output]
+bit_format = 8bit
+method = raw
+style = mono
+
+[color]
+foreground = white
+
