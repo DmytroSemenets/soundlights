@@ -1,11 +1,14 @@
 Soundlights
 ===========
 
+[![Video](https://img.youtube.com/vi/2B_E62ZpD90/0.jpg)](https://www.youtube.com/watch?v=2B_E62ZpD90)
+
 Soundlights built on top of [cava](https://github.com/karlstav/cava) with Raspberry Pi
 and NeoPixel Strip.
 
 Installation:
  - build cava with (full instruction available below):
+ 
  ```
  ./autogen.sh
  ./configure
@@ -18,7 +21,7 @@ Installation:
 Connect NeoPixel Strip to Raspberry Pi:
  - ground &rarr; ground PIN;
  - power &rarr; 3.3V PIN;
- - logic &arr; GPIO PIN 18.
+ - logic &rarr; GPIO PIN 18.
  
 Usage:
  ```
