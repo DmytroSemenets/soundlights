@@ -3,8 +3,7 @@ Soundlights
 
 [![Video](https://img.youtube.com/vi/2B_E62ZpD90/0.jpg)](https://www.youtube.com/watch?v=2B_E62ZpD90)
 
-Soundlights built on top of [cava](https://github.com/karlstav/cava) with Raspberry Pi
-and NeoPixel Strip.
+Soundlights built on top of [cava](https://github.com/karlstav/cava) with Raspberry Pi/ESP8266 and NeoPixel Strip.
 
 Installation:
  - build cava with (full instruction available below):
@@ -14,6 +13,10 @@ Installation:
  ./configure
  make
  ```
+ 
+Raspberry PI
+------------
+ 
  - install [expect](http://expect.sourceforge.net/);
  - install [rpi_ws281x](https://github.com/jgarff/rpi_ws281x) on your Raspberry Pi;
  - copy `soundlights/soundlights.py` to your Raspberry Pi.
@@ -24,9 +27,27 @@ Connect NeoPixel Strip to Raspberry Pi:
  - logic &rarr; GPIO PIN 18.
  
 Usage:
- ```
- unbuffer ./cava -p soundlights/cava_config | ssh pi@retropie.local sudo python soundlights.py
- ```  
+
+```
+unbuffer ./cava -p soundlights/cava_config | ssh pi@retropie.local sudo python soundlights.py
+```  
+ 
+ESP8266
+-------
+
+ - connect ESP8266 board to your wifi;
+ - upload `soundlights/esp/main.py` to your ESP8266.
+ 
+Connect NeoPixel Strip to your board:
+ - ground &rarr; ground PIN;
+ - power &rarr; 3.3V PIN;
+ - logic &rarr; GPIO PIN 5 (D01 on my board).
+
+Usage:
+
+```
+unbuffer ./cava -p soundlights/cava_config | python cava/soundlights/esp/client.py
+```
 
 Original readme
 ===============
